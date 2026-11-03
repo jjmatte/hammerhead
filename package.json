@@ -1,0 +1,22 @@
+{
+  "name": "hammerhead",
+  "version": "0.1.0",
+  "description": "Job-application automation research and building blocks for Hermes Agent",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "verify:fence": "./scripts/verify-fence.sh",
+    "verify:injection": "./scripts/verify-injection.sh"
+  },
+  "keywords": [
+    "jobs",
+    "ats",
+    "resume",
+    "hermes-agent",
+    "automation"
+  ]
+}
