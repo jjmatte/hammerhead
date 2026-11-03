@@ -12,6 +12,8 @@ so it survives automated screening — using LLM models and my Hermes agent?*
   2026-11-03.
 - **[PLAN.md](PLAN.md)** — the decision document. What to build, in what order,
   what to skip, and the five decisions that are yours to make.
+- **[docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md)** — the code, in detail.
+  Architecture, data shapes, module-by-module breakdown, and how to extend.
 
 ## The short version
 
