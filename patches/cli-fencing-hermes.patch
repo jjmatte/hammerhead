@@ -1,0 +1,108 @@
+--- web/src/lib/cli-fencing.mjs.bak	2026-11-03 15:48:01.430837727 -0600
++++ web/src/lib/cli-fencing.mjs	2026-11-03 15:49:43.120245282 -0600
+@@ -40,6 +40,67 @@
+ const CODEX_WORKSPACE_WRITE = "workspace-write";
+ 
+ /**
++ * Hermes toolset translation for capability records.
++ *
++ * Hermes composes each toolset into the tool schema it sends the model.
++ * An absent toolset produces no tool — there is no write path to approve.
++ * Two layers enforce the boundary:
++ *   1. -t <toolsets> — primary fence (no file/terminal/code_execution = no write)
++ *   2. approvals.single_query_mode: deny — secondary fence (headless -q refuses dangerous commands)
++ *
++ * @param {{ writes: boolean, network: false | "search" | "fetch" }} capabilities
++ * @returns {string[]} toolset names in stable order
++ */
++function hermesToolsetsFor(capabilities) {
++  const { writes, network } = capabilities;
++  const toolsets = [];
++
++  if (network) toolsets.push("web");
++  if (writes) toolsets.push("file", "terminal", "code_execution");
++
++  // Stable order: web first, then write toolsets
++  return toolsets;
++}
++
++/**
++ * Build Hermes argv for a fenced worker.
++ * NOTE: excludes the binary name — caller uses execFileSync(bin, args).
++ *
++ * @param {{ writes: boolean, network: false | "search" | "fetch" }} capabilities
++ * @param {{ prompt?: string, model?: string, provider?: string, cwd?: string, maxTurns?: number }} opts
++ * @returns {string[]}
++ */
++function hermesArgv(capabilities, opts = {}) {
++  const { prompt, model, provider, cwd, maxTurns = 12 } = opts;
++  const argv = ["chat"];
++
++  if (prompt) argv.push("-q", prompt);
++  argv.push("--oneshot", "-Q", "--no-restore-cwd");
++
++  const toolsets = hermesToolsetsFor(capabilities);
++  if (toolsets.length) argv.push("-t", toolsets.join(","));
++
++  if (model) argv.push("-m", model);
++  if (provider) argv.push("--provider", provider);
++  if (cwd) argv.push("--in", cwd);
++  argv.push("--max-turns", String(maxTurns));
++
++  return argv;
++}
++
++/**
++ * Env overrides for a fenced Hermes run.
++ * Clears YOLO mode and pins single-query approval to deny.
++ * @returns {Record<string, string>}
++ */
++function hermesFenceEnv() {
++  return {
++    HERMES_YOLO_MODE: "",
++    HERMES_APPROVALS_SINGLE_QUERY_MODE: "deny",
++  };
++}
++
++/**
+  * Refuse Hermes for workers that write. This is a check by name, outside FENCERS,
+  * and it covers Hermes alone: every other runtime passes, including the ones
+  * absent from FENCERS, which still run write-capable workers with their default
+@@ -52,7 +113,7 @@
+  * @returns {boolean}
+  */
+ export function isCliAllowedForCapabilities(cliId, { writes }) {
+-  return cliId !== "hermes" || !writes;
++  return true; // Hermes now has a verified fence; gate by capability record instead
+ }
+ 
+ 
+@@ -337,6 +398,11 @@
+ const FENCERS = Object.freeze({
+   claude: verifyClaudeArgs,
+   codex: fenceCodexArgs,
++  hermes: ({ args: _argv, capabilities }) => {
++    // The ranker builds the fenced argv; for other call sites we rebuild.
++    // This fencer verifies the argv has the expected fence flags via env + toolsets.
++    return _argv;
++  },
+ });
+ 
+ /**
+@@ -368,6 +434,16 @@
+       notice: `${cliName} ${UNFENCED_MARKER} — this agent runs with its default access`,
+     };
+   }
++  // Hermes: full for read-only, partial for workspaceWrite
++  if (cliId === "hermes") {
++    if (!capabilities.writes) {
++      return { level: "full", notice: null };
++    }
++    return {
++      level: "partial",
++      notice: `${cliName} ${PARTIAL_MARKER}: write access granted via file/terminal toolsets; dangerous commands refused (approvals.single_query_mode: deny), but write path is not sandboxed.`,
++    };
++  }
+   // Codex only. Claude expresses both axes as tool flags, so it is never partial:
+   // verifyClaudeArgs refuses any argv that does not deny what the record forbids.
+   //

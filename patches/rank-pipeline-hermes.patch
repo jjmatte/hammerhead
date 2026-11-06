@@ -1,0 +1,31 @@
+--- rank-pipeline.mjs.bak	2026-11-03 15:47:21.586470651 -0600
++++ rank-pipeline.mjs	2026-11-03 15:47:48.799721360 -0600
+@@ -98,6 +98,7 @@
+     ],
+   },
+   { bin: 'qwen', args: p => ['-p', p] },
++  { bin: 'hermes', args: p => ['chat', '-q', p, '--oneshot', '-Q', '--no-restore-cwd', '-t', 'web', '--max-turns', '1'] },
+   { bin: 'agy', id: 'antigravity', args: p => ['-p', p] },
+   { bin: 'grok', args: p => ['-p', p, '--disable-web-search', '--disallowed-tools', GROK_DENIED_TOOLS] },
+   { bin: 'pi', args: p => ['--no-tools', '-p', p] },
+@@ -374,11 +375,6 @@
+   const model = flagValue(args, '--model');
+   const forced = flagValue(args, '--cli') ?? process.env.CAREER_OPS_RANK_CLI;
+ 
+-  if (forced === 'hermes') {
+-    console.error('Hermes is not supported for batch ranking.');
+-    return 1;
+-  }
+-
+   if (!existsSync(PIPELINE_PATH)) {
+     console.log('No data/pipeline.md yet — run a scan first. Nothing to rank.');
+     return 0;
+@@ -570,7 +566,7 @@
+ 
+   const probe = bin => bin === 'codex';
+   check('detect picks the installed CLI', detectCli(CLI_CANDIDATES, probe).bin === 'codex');
+-  check('Hermes is excluded from batch candidates', !CLI_CANDIDATES.some(c => c.bin === 'hermes'));
++  check('Hermes is included in batch candidates', CLI_CANDIDATES.some(c => c.bin === 'hermes'));
+   check('detect returns null when none installed', detectCli(CLI_CANDIDATES, () => false) === null);
+   check('detect respects priority order', detectCli(CLI_CANDIDATES, () => true).bin === 'claude');
+ 
