@@ -1,0 +1,13 @@
+Joshua Matte
+Fort Worth, TX | joshuajmatte@gmail.com | (682) 582-5558
+
+When I read that Vercel's platform powers the frontend infrastructure for millions of developers and some of the world's largest websites, I recognized the rare opportunity to build backend systems that genuinely shape how the modern web works. As a full-stack developer who progressed from help desk to production backend engineer in just over a year, shipping a platform serving 80+ daily users, implementing RBAC/ReBAC auth patterns, and modernizing legacy SQL databases into API-accessible platforms, I'm drawn to joining a team where technical excellence directly amplifies developer experience at massive scale.
+
+My experience at Bloomfield Homes aligns precisely with Vercel's backend stack and engineering culture. Working with React, TypeScript, Node.js/Express, and Prisma across SQL Server, MySQL, and PostgreSQL, I've independently designed and deployed backend features including REST APIs with connection pooling, database migrations, and query optimization for production workloads. I've implemented authentication and authorization patterns (session management, RBAC, JWT, OAuth/OIDC concepts, SCIM awareness) that directly transfer to Vercel's identity protocols (LDAP, Active Directory, SAML, SSO, OAuth2, OpenID Connect) and access control models (RBAC, ABAC, ReBAC). I've debugged production incidents spanning frontend state, API layer, and database, and managed CI/CD pipelines with GitHub Actions, exactly the end-to-end ownership Vercel values.
+
+What excites me most about Vercel is the intersection of developer experience obsession and infrastructure rigor. Your investment in edge computing, the build output API, and zero-config preview deployments represents the gold standard I've chased in my own work building internal developer tools. Before transitioning to software engineering, I spent five years in safety-critical industrial electrical work (Syncrude Foreman) that instilled a deep respect for reliability, systematic debugging, and zero-failure mindset, perspectives that inform how I approach building systems developers depend on daily. The opportunity to work on identity, access control, and scalable backend systems for a platform that sets the bar for modern web infrastructure represents exactly the kind of meaningful challenge I seek.
+
+I'm eager to bring my track record of rapid learning, production-quality backend engineering, and operational-reliability mindset to Vercel's Backend team. I would welcome the opportunity to discuss how my experience building secure, scalable APIs and identity systems can contribute to the platform that powers the frontend cloud.
+
+Sincerely,
+Joshua Matte

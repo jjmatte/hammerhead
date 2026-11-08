@@ -1,0 +1,41 @@
+{
+  "page": {
+    "size": "Letter",
+    "margins_mm": { "top": 25, "bottom": 25, "left": 25, "right": 25 }
+  },
+  "styles": [
+    { "name": "CoverNormal", "base": "Normal", "font": "Calibri", "size_pt": 11, "color": "1a1a2e" }
+  ],
+  "blocks": [
+    { "type": "paragraph", "style": "CoverNormal", "text": "Joshua Matte" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Fort Worth, TX | (682) 582-5558 | joshuajmatte@gmail.com" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "github.com/jjmatte | linkedin.com/in/joshuajmatte" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "November 8, 2026" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Hiring Team" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Stripe" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Dublin, Ireland" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Re: Full-Stack Software Engineer, Communication Tools (Collaboration Team)" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Dear Hiring Team," },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Stripe's Collaboration team mission — building AI-native internal tools that act as a force multiplier for fellow Stripes — resonates deeply with how I've spent the last two years. At Bloomfield Homes, I built and maintain \"Lots,\" a production platform replacing a legacy Access database that now serves 80+ daily users across Sales, Construction, and Purchasing. The parallel is direct: I translate ambiguous needs from non-technical stakeholders into well-defined, end-to-end technical solutions, ship across the full stack, and measure success by whether my users can work faster and with less friction." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "The role calls for 6+ years of engineering experience with 2+ years building rich web experiences in React and TypeScript, plus comfort across Ruby, backend services, and AI tooling. My stack maps cleanly: React 19, TypeScript, and TanStack Table on the frontend; Node.js/Express and Ruby on Rails APIs on the backend; GraphQL, REST, and WebSockets for real-time features; Prisma and Drizzle ORMs across SQL Server, MySQL, and PostgreSQL. I've architected multi-step approval workflows with auditable access control (ReBAC patterns), virtualized data grids over thousands of records, and real-time document storage — all in a cross-functional environment where I scope, design, implement, test, deploy, and maintain features independently." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "What distinguishes my background is the daily integration of AI/LLM tooling into production engineering. I use AI for code generation, debugging, refactoring, and architecture exploration while maintaining full ownership of the systems that result. I'm familiar with agentic patterns and MCP tooling concepts — exactly the \"latest AI tooling to refine both your users' workflows and your own\" that the job description highlights. My side projects (a SvelteKit/Drizzle net-worth tracker with Vitest/Playwright CI, an Astro portfolio with typed content collections) reinforce a test-driven, quality-first approach." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Before engineering, I spent seven years as a Red Seal electrician and foreman on safety-critical industrial systems at Syncrude. That experience instilled a zero-failure tolerance, systematic debugging under constraints, and clear procedural thinking — habits that transfer directly to production reliability and on-call readiness. I hold CompTIA Security+, Network+, and A+ certifications, and I bring a security-minded approach to every layer: least-privilege access patterns, secrets management, threat modeling, and input validation baked into design." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "I'm particularly drawn to the Collaboration team's explicit focus on cross-functional partnership — working with Communications, senior leadership, and non-technical teams to build creative solutions. That's my daily reality: I collaborate with Sales, Construction, Purchasing, and Communications stakeholders to translate needs into technical deliverables, write documentation that enables self-service adoption, and mentor junior developers by establishing reusable patterns (approval workflows, data grids, form components) adopted org-wide." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "I'm based in Fort Worth, TX, and am open to relocating to Dublin for this role. The opportunity to build tools that amplify the productivity of a world-class engineering organization — while working on a small, high-leverage team that chooses its work carefully — is exactly the environment where I do my best work. I'd welcome the chance to discuss how my internal-tools experience, full-stack fluency, and AI-assisted development practice can contribute to the Collaboration team's mission." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Thank you for your time and consideration." },
+    { "type": "paragraph", "style": "CoverNormal", "text": "" },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Sincerely," },
+    { "type": "paragraph", "style": "CoverNormal", "text": "Joshua Matte" }
+  ]
+}
