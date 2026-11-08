@@ -69,12 +69,14 @@ npm test                                   # 32 unit tests, no network
 
 Requires Node 22.13+ and a working Hermes install with a configured provider.
 
-## Status
+## Status (2026-11-08)
 
-Nothing here is committed or published. The research is complete and the
-building blocks are verified; **the plan in `PLAN.md` is the deliverable, and
-Phase 1 of it (use career-ops for a day before building anything) may well
-dissolve the rest.**
+**Phases 1 & 2 complete.** Daily automation with email digest via Gmail SMTP is live.
+
+- **Phase 1** — Validated career-ops end-to-end with Hermes: scan → rank → evaluate → tailor resume → cover letter → interview prep (all 4 workflow steps production-quality)
+- **Phase 2** — Contributed Hermes permission fence to career-ops fork (`jjmatte/career-ops`): added Hermes to `CLI_CANDIDATES` with capability→toolset translation; all tests pass (hammerhead 32/32, career-ops cli-fencing 32/32, rank-pipeline 1/1)
+- **Daily cron** — Runs at 8:00 AM CST (`cronjob_manage` ID `0265547e7d8e`); scans 7 companies + 6 aggregators (129 postings), Hermes ranks all, emails top 50 + full list attachment
+- **Phase 3** — Iterating on applications: jobs 1–15 processed (ElevenLabs, Vercel, Stripe, Ivanti, Bask Health, Toddle, Vamonos IT, Imagine LLC, ElevenLabs Enterprise, Stripe Internal Identity, Naples Jet Center, Vercel Connect, Dropbox, Ampa) — tailored resumes and cover letters generated as `.docx` with zero em dashes, crossed off in `.career-ops/data/pipeline.md`
 
 ## Licence
 
