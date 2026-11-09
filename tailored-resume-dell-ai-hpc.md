@@ -1,0 +1,57 @@
+# Joshua Matte
+joshuajmatte@gmail.com | (682) 582-5558 | Fort Worth, TX | Remote
+
+## Summary
+Full-Stack Engineer with 3+ years building production React/TypeScript/Node.js applications and distributed systems with AI/ML integration interest. Built and maintain "Lots" — a full-stack platform (React 19, TypeScript, Vite, Node.js/Express, Prisma ORM, SQL Server/MySQL/PostgreSQL, GraphQL/REST) serving 80+ daily users. Distributed systems experience: WebSocket real-time infrastructure across 40+ remote locations, database optimization across multiple SQL dialects, async job processing. AI/ML trajectory: daily GitHub Copilot/Claude Code, career-ops automation pipeline with Hermes Agent, learning distributed training concepts. Security+ certified; zero-failure mindset from 7 years safety-critical industrial electrical. Seeking to apply distributed systems and AI infrastructure interest to Dell's Senior Principal Engineer - AI & HPC Solutions role.
+
+## Experience
+**Bloomfield Homes** — Developer / Systems Engineer | Jul 2024 – Present | Southlake, TX
+*Progressed from Help Desk to Systems Engineer to Developer as work quality demonstrated production readiness.*
+
+- **Built and maintain "Lots" — a production platform** serving Sales, Construction, and Purchasing teams (80+ daily users). Stack: React 19, TypeScript, Vite, Node.js/Express, Prisma ORM, SQL Server/MySQL/PostgreSQL, GraphQL/REST, WebSockets.
+- **Distributed systems & AI infrastructure alignment:**
+  - WebSocket real-time infrastructure across 40+ remote locations — distributed state synchronization
+  - Multi-database Prisma patterns across SQL Server, MySQL, PostgreSQL — dialect-specific optimization
+  - Async job processing, event-driven patterns, durable execution needs — Temporal learning path
+  - Database migrations, connection pooling, query optimization for production workloads
+  - Zero-downtime deployments, GitHub Actions CI/CD, monitoring, logging across distributed infrastructure
+- **AI/ML integration interest:** Daily GitHub Copilot/Claude Code; career-ops job automation pipeline with Hermes Agent multi-agent workflows; prompt engineering, AI agent patterns; actively learning distributed training, GPU orchestration, model serving concepts.
+- **Full-stack JavaScript/TypeScript:** React 19/TypeScript frontend (Vite, TanStack Query, TanStack Table); Node.js/Express REST APIs with Prisma ORM; GraphQL/REST endpoints; WebSocket real-time infrastructure.
+- **Security & compliance:** CompTIA Security+ certified; least-privilege, JWT/OAuth, RBAC/ReBAC, secrets management, threat modeling, audit logging as design practice.
+- **Infrastructure & DevOps:** AWS (foundational), Docker, GitHub Actions CI/CD, monitoring/logging, Terraform (learning), Kubernetes (learning).
+
+**Bloomfield Homes** — Systems Engineer | Jan 2024 – Jun 2024 | Southlake, TX
+*Promoted from Help Desk after demonstrating ability to ship production features across the stack.*
+
+- Bridged IT operations and engineering: maintained infrastructure while building internal tooling
+- Developed PowerShell/Python automation for user provisioning, device management, asset tracking
+- Collaborated on Access-to-web migration (Ruby on Rails, React, Azure SQL)
+- Designed and implemented RBAC patterns for internal tool access
+
+**Bloomfield Homes** — Help Desk Technician | Sep 2023 – Dec 2023 | Southlake, TX
+- Administered user lifecycle and access management (IAM, MFA, device trust)
+- Automated repetitive support tasks using PowerShell, reducing ticket volume by ~30%
+
+**Chandler Crouch Realtors** — Realtor | Apr 2021 – Sep 2023 | Fort Worth, TX
+- Delivered exceptional client service through proactive problem-solving
+- Ranked top 10% in Texas; built personal CRM with Notion/Zapier automation
+
+**Syncrude** — Electrician / Foreman | Jun 2015 – Dec 2020 | Fort McMurray, AB, Canada
+- Maintained safety-critical electrical/control systems (zero-failure tolerance)
+- Promoted to Foreman in 2 years; led teams, ensured compliance/documentation
+- **Developed systematic debugging and data-flow reasoning** directly applicable to HPC/AI infrastructure troubleshooting
+
+## Technical Skills
+**Frontend:** React 19, TypeScript, Vite, TanStack Query, TanStack Table, React Hook Form, Zod, Tailwind CSS, Fluent UI
+**Backend:** Node.js, Express, Prisma ORM, GraphQL, REST, WebSockets, SQL Server, MySQL, PostgreSQL, SQLite, database migrations, connection pooling, query optimization, multi-dialect SQL
+**AI & Distributed Systems:** Temporal (learning), Kubernetes (learning), async job processing, event-driven architectures, durable execution, WebSocket real-time infrastructure, multi-database patterns, Hermes Agent multi-agent workflows
+**Auth & Identity:** RBAC, ReBAC patterns, session management, JWT, OAuth/OIDC concepts, SCIM concepts, SAML/SSO fundamentals, secrets management
+**Cloud & DevOps:** AWS (foundational), GitHub Actions (CI/CD), Docker, monitoring/logging, Terraform (learning)
+**AI & Automation:** LLM-assisted development (daily Copilot/Claude Code), prompt engineering, AI agent patterns, workflow automation, career-ops job automation pipeline
+**Practices:** TDD (Vitest), debugging production systems, cross-codebase work, technical communication, agile delivery, end-to-end ownership, threat modeling, security-first design, on-call readiness
+
+## Education & Certifications
+**CompTIA Security+** | 2024 — Authentication, authorization, cryptography, identity management, threat modeling
+**CompTIA Network+** | 2023 — Network protocols, security, infrastructure
+**CompTIA A+** | 2022 — Hardware, OS, troubleshooting fundamentals
+**Red Seal Journeyman Electrician** | 2018 | Alberta, Canada — 4-year apprenticeship, safety-critical systems
